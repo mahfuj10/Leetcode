@@ -19,4 +19,5 @@ var promisePool = async function(functions, n) {
      * promisePool([() => sleep(500), () => sleep(400)], 1)
      *   .then(console.log) // After 900ms
      */
+    2396. Strictly Palindromic Number
 
