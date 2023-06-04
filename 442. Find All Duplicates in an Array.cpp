@@ -5,22 +5,13 @@ public:
     {
         if (nums.empty())
             return {};
-
         vector<int> res;
-        int size = nums.size();
-
-        for (int i = 0; i < size; ++i)
-        {
-            for (int j = i + 1; j < size; ++j)
-            {
-                if (nums[i] == nums[j])
-                {
-                    res.push_back(nums[i]);
-                    break;
-                };
-            }
-        }
-
+        unordered_map<int, int> mp;
+        for (int no : nums)
+            mp[no]++;
+        for (auto it : mp)
+            if (it.second == 2)
+                res.push_back(it.first);
         return res;
     }
 };
