@@ -8,7 +8,7 @@ public:
         {
             if (address[i] == '.')
             {
-                IP += '[.]';
+                IP += "[.]";
             }
             else
             {
